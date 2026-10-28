@@ -4,7 +4,7 @@ RUN apt-get update && apt-get install -y ffmpeg && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 
-RUN git clone https://github.com/lyfe00011/levanter.git .
+RUN git clone https://github.com/lyfe00011/levanter.git . && git checkout 98d66bb5
 
 RUN yarn install
 
