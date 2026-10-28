@@ -1,0 +1,72 @@
+{
+  "name": "Levanter",
+  "description": "Deploy the Levanter WhatsApp bot on Heroku. Deploy setup by AHMED X.",
+  "keywords": ["nodejs", "whatsapp", "bot"],
+  "repository": "https://github.com/THE-AHMEXD/levanter-deploy",
+  "success_url": "/",
+  "stack": "container",
+  "env": {
+    "SESSION_ID": {
+      "description": "Your Levanter session ID. Get it from the Levanter session site.",
+      "required": true,
+      "value": ""
+    },
+    "SUDO": {
+      "description": "Admin numbers that can control the bot, separated by commas.",
+      "required": false,
+      "value": ""
+    },
+    "PREFIX": {
+      "description": "Command prefix, for example a dot.",
+      "required": false,
+      "value": "."
+    },
+    "ALWAYS_ONLINE": {
+      "description": "Show the bot number as always online (true/false).",
+      "required": false,
+      "value": "false"
+    },
+    "SEND_READ": {
+      "description": "Send blue ticks on messages (true/false).",
+      "required": false,
+      "value": "false"
+    },
+    "STICKER_PACKNAME": {
+      "description": "Sticker pack name shown on stickers the bot makes.",
+      "required": false,
+      "value": "AHMED X"
+    },
+    "WARN_LIMIT": {
+      "description": "Maximum warnings before action in groups.",
+      "required": false,
+      "value": "3"
+    },
+    "BOT_LANG": {
+      "description": "Bot language code.",
+      "required": false,
+      "value": "en"
+    },
+    "HEROKU_APP_NAME": {
+      "description": "This app's own name on Heroku (only needed for the bot's Heroku self-management features).",
+      "required": false,
+      "value": ""
+    },
+    "HEROKU_API_KEY": {
+      "description": "Heroku API key (only needed for the bot's Heroku self-management features).",
+      "required": false,
+      "value": ""
+    }
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql:essential-0"
+    }
+  ],
+  "buildpacks": [],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  }
+}
