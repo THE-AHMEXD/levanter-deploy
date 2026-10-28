@@ -1,3 +1,5 @@
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/THE-AHMEXD/levanter-deploy)
+
 # levanter-deploy
 
 Heroku deploy setup for the **Levanter** WhatsApp bot, maintained by **AHMED X**.
